@@ -1,25 +1,40 @@
+using API.ServicesExtension;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+#region Add services to the container
 
+// Register Api Controller
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+// Register Required Services For Swagger In Extension Method
+builder.Services.AddSwaggerServices();
+
+#endregion
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+#region Configure the Kestrel pipeline
+
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    // -- Add Swagger Middelwares In Extension Method
+    app.UseSwaggerMiddleware();
 }
 
-app.UseHttpsRedirection();
+/// -- In MVC We Used This Way For Routing
+///app.UseRouting(); // -> we use this middleware to match request to an endpoint
+///app.UseEndpoints  // -> we use this middleware to excute the matched endpoint
+///(endpoints =>  
+///{
+///    endpoints.MapControllerRoute(
+///        name: "default",
+///        pattern: "{controller}/{action}"
+///        );
+///});
+/// -- But We Use MapController Instead Of It Because We Create Routing On Controller Itself
+app.MapControllers(); // -> we use this middleware to talk program that: your routing depend on route written on the controller
 
-app.UseAuthorization();
-
-app.MapControllers();
+#endregion
 
 app.Run();

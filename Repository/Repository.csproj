@@ -6,4 +6,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Data\Configurations\" />
+    <Folder Include="Data\DataSeeding\" />
+    <Folder Include="Data\Migrations\" />
+    <Folder Include="Identity\Configurations\" />
+    <Folder Include="Identity\Migrations\" />
+    <Folder Include="Identity\DataSeeding\" />
+  </ItemGroup>
+
 </Project>

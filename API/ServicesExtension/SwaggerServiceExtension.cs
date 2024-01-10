@@ -1,8 +1,8 @@
 ﻿namespace API.ServicesExtension
 {
-    public class SwaggerServiceExtension
+    public static class SwaggerServiceExtension
     {
-        public static IServiceCollection AddSwaggerServices (IServiceCollection services)
+        public static IServiceCollection AddSwaggerServices(this IServiceCollection services)
         {
             services.AddEndpointsApiExplorer();
 
@@ -11,7 +11,7 @@
             return services;
         }
         
-        public static WebApplication AddSwaggerServices (WebApplication app)
+        public static WebApplication UseSwaggerMiddleware(this WebApplication app)
         {
             app.UseSwagger();
 
