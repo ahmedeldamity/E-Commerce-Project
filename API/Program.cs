@@ -38,6 +38,9 @@ builder.Services.AddDbContext<StoreContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+// This Method Has All Application Services
+builder.Services.AddApplicationServices();
+
 #endregion
 
 var app = builder.Build();

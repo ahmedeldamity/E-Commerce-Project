@@ -9,3 +9,9 @@ D:\E-Commerce Project\Service\obj\Debug\net7.0\Service.dll
 D:\E-Commerce Project\Service\obj\Debug\net7.0\refint\Service.dll
 D:\E-Commerce Project\Service\obj\Debug\net7.0\Service.pdb
 D:\E-Commerce Project\Service\obj\Debug\net7.0\ref\Service.dll
+D:\E-Commerce Project\Service\bin\Debug\net7.0\Core.dll
+D:\E-Commerce Project\Service\bin\Debug\net7.0\Repository.dll
+D:\E-Commerce Project\Service\bin\Debug\net7.0\Repository.pdb
+D:\E-Commerce Project\Service\bin\Debug\net7.0\Core.pdb
+D:\E-Commerce Project\Service\obj\Debug\net7.0\Service.csproj.AssemblyReference.cache
+D:\E-Commerce Project\Service\obj\Debug\net7.0\Service.csproj.CopyComplete

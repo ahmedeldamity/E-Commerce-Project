@@ -11,6 +11,7 @@
           "Microsoft.AspNetCore.OpenApi": "7.0.15",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.15",
           "Repository": "1.0.0",
+          "Service": "1.0.0",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
@@ -625,6 +626,14 @@
         "runtime": {
           "Repository.dll": {}
         }
+      },
+      "Service/1.0.0": {
+        "dependencies": {
+          "Repository": "1.0.0"
+        },
+        "runtime": {
+          "Service.dll": {}
+        }
       }
     }
   },
@@ -1109,6 +1118,11 @@
       "sha512": ""
     },
     "Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

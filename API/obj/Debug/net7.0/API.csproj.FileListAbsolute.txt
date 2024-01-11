@@ -79,3 +79,5 @@ D:\E-Commerce Project\API\obj\Debug\net7.0\API.genruntimeconfig.cache
 D:\E-Commerce Project\API\obj\Debug\net7.0\ref\API.dll
 D:\E-Commerce Project\API\bin\Debug\net7.0\Core.dll
 D:\E-Commerce Project\API\bin\Debug\net7.0\Core.pdb
+D:\E-Commerce Project\API\bin\Debug\net7.0\Service.dll
+D:\E-Commerce Project\API\bin\Debug\net7.0\Service.pdb

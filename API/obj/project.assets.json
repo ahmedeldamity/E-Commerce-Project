@@ -1183,6 +1183,19 @@
         "runtime": {
           "bin/placeholder/Repository.dll": {}
         }
+      },
+      "Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Service.dll": {}
+        }
       }
     }
   },
@@ -3365,6 +3378,11 @@
       "type": "project",
       "path": "../Repository/Repository.csproj",
       "msbuildProject": "../Repository/Repository.csproj"
+    },
+    "Service/1.0.0": {
+      "type": "project",
+      "path": "../Service/Service.csproj",
+      "msbuildProject": "../Service/Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3372,6 +3390,7 @@
       "Microsoft.AspNetCore.OpenApi >= 7.0.15",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.15",
       "Repository >= 1.0.0",
+      "Service >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -3404,6 +3423,9 @@
           "projectReferences": {
             "D:\\E-Commerce Project\\Repository\\Repository.csproj": {
               "projectPath": "D:\\E-Commerce Project\\Repository\\Repository.csproj"
+            },
+            "D:\\E-Commerce Project\\Service\\Service.csproj": {
+              "projectPath": "D:\\E-Commerce Project\\Service\\Service.csproj"
             }
           }
         }
