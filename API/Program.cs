@@ -42,7 +42,7 @@ builder.Services.AddDbContext<StoreContext>(options =>
 
 var app = builder.Build();
 
-#region Update Database With Using Way
+#region Update Database With Using Way And Seeding Data
 
 // We Said To Update Database You Should Do Two Things (1. Create Instance From DbContext 2. Migrate It)
 
@@ -62,8 +62,8 @@ try
     // Migrate It In Try Catch To Avoid Throw Exception While Update Database
     await _storeContext.Database.MigrateAsync();
 
-    //// Seeding Data For StoreDbContext
-    //await StoreContextSeed.SeedAsync(_storeDbContext);
+    // Seeding Data For StoreDbContext
+    await StoreContextSeed.SeedProductDataAsync(_storeContext);
 }
 catch (Exception ex)
 {
