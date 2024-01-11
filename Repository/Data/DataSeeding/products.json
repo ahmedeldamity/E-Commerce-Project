@@ -1,0 +1,250 @@
+[
+    {
+        "Name": "Dell XPS 15 OLED",
+        "Description": "High-end laptop with OLED display and powerful specs",
+        "Price": 2799.99,
+        "PictureUrl": "images/products/Gear-Dell-XPS-15-OLED.webp",
+        "CategoryId": 3,
+        "BrandId": 3
+    },
+    {
+        "Name": "Lenovo Yoga Slim 7",
+        "Description": "Ultraportable laptop with a sleek design and AMD Ryzen 7 processor",
+        "Price": 899.99,
+        "PictureUrl": "images/products/Lenovo-Slim-7.webp",
+        "CategoryId": 4,
+        "BrandId": 6
+    },
+    {
+        "Name": "Lenovo Yoga C940",
+        "Description": "Premium 2-in-1 laptop with Dolby Vision and powerful sound",
+        "Price": 1399.99,
+        "PictureUrl": "images/products/Lenovo-Yoga-C940.webp",
+        "CategoryId": 1,
+        "BrandId": 6
+    },
+    {
+        "Name": "ASUS ROG Strix Scar 17",
+        "Description": "Built for esports with fast response time and RGB lighting",
+        "Price": 1999.99,
+        "PictureUrl": "images/products/ASUS-ROG-Strix-Scar-17.webp",
+        "CategoryId": 5,
+        "BrandId": 4
+    },
+    {
+        "Name": "Asus ZenBook Flip 14",
+        "Description": "Slim and stylish convertible laptop with NanoEdge display",
+        "Price": 1299.99,
+        "PictureUrl": "images/products/Asus-ZenBook-Flip-14.webp",
+        "CategoryId": 1,
+        "BrandId": 4
+    },
+    {
+        "Name": "Samsung Galaxy Book Pro",
+        "Description": "Sleek and powerful laptop with AMOLED display",
+        "Price": 1399.99,
+        "PictureUrl": "images/products/Samsung-Galaxy-Book-Pro.webp",
+        "CategoryId": 3,
+        "BrandId": 5
+    },
+    {
+        "Name": "HP Elite Dragonfly",
+        "Description": "Ultra-light business laptop with 2-in-1 functionality",
+        "Price": 1799.99,
+        "PictureUrl": "images/products/HP-Elite-Dragonfly.webp",
+        "CategoryId": 2,
+        "BrandId": 1
+    },
+    {
+        "Name": "MacBook Pro Gaming Edition",
+        "Description": "High-performance gaming laptop with stunning Retina display",
+        "Price": 2499.99,
+        "PictureUrl": "images/products/MacBook-Pro-Gaming-Edition.webp",
+        "CategoryId": 5,
+        "BrandId": 2
+    },
+    {
+        "Name": "Surface Laptop Studio",
+        "Description": "Innovative design with a versatile display for creative professionals",
+        "Price": 2499.99,
+        "PictureUrl": "images/products/Surface-Laptop-Studio.webp",
+        "CategoryId": 3,
+        "BrandId": 7
+    },
+    {
+        "Name": "Lenovo ThinkPad X1 Carbon",
+        "Description": "Business-class laptop with durable design and high-res display",
+        "Price": 1699.99,
+        "PictureUrl": "images/products/Lenovo-ThinkPad-X1-Carbon.webp",
+        "CategoryId": 2,
+        "BrandId": 6
+    },
+    {
+        "Name": "Asus ROG Zephyrus G14",
+        "Description": "Gaming laptop with AMD Ryzen 9 processor and RTX 3060 GPU",
+        "Price": 1799.99,
+        "PictureUrl": "images/products/Asus-ROG-Zephyrus-G14.webp",
+        "CategoryId": 5,
+        "BrandId": 7
+    },
+    {
+        "Name": "MacBook Pro 16-inch",
+        "Description": "Pro-grade performance with a stunning Retina display",
+        "Price": 2399.99,
+        "PictureUrl": "images/products/MacBook-Pro-16-inch.webp",
+        "CategoryId": 3,
+        "BrandId": 2
+    },
+    {
+        "Name": "Asus ZenBook 14",
+        "Description": "Sleek and portable Ultrabook with NanoEdge display",
+        "Price": 1199.99,
+        "PictureUrl": "images/products/Asus-ZenBook-14.webp",
+        "CategoryId": 6,
+        "BrandId": 4
+    },
+    {
+        "Name": "HP Spectre x360",
+        "Description": "Convertible laptop with 4K display and powerful performance",
+        "Price": 1499.99,
+        "PictureUrl": "images/products/HP-Spectre-x360.webp",
+        "CategoryId": 1,
+        "BrandId": 1
+    },
+    {
+        "Name": "Alienware m15",
+        "Description": "High-performance gaming laptop with NVIdIA RTX 3080",
+        "Price": 2499.99,
+        "PictureUrl": "images/products/Alienware-m15.webp",
+        "CategoryId": 5,
+        "BrandId": 3
+    },
+    {
+        "Name": "MacBook Pro 13",
+        "Description": "Powerful ultraportable laptop with Retina display",
+        "Price": 1499.99,
+        "PictureUrl": "images/products/MacBook-Pro-13.webp",
+        "CategoryId": 4,
+        "BrandId": 2
+    },
+    {
+        "Name": "Asus ZenBook Pro Duo",
+        "Description": "Dual-screen laptop for multitasking and productivity",
+        "Price": 2999.99,
+        "PictureUrl": "images/products/Asus-ZenBook-Pro-Duo.webp",
+        "CategoryId": 3,
+        "BrandId": 4
+    },
+    {
+        "Name": "Lenovo Ideapad 5",
+        "Description": "Affordable and versatile notebook with AMD Ryzen processor",
+        "Price": 699.99,
+        "PictureUrl": "images/products/Lenovo-Ideapad-5.webp",
+        "CategoryId": 7,
+        "BrandId": 6
+    },
+    {
+        "Name": "Microsoft Surface Book 3",
+        "Description": "High-performance detachable laptop with PixelSense display",
+        "Price": 1799.99,
+        "PictureUrl": "images/products/Microsoft-Surface-Book-3.webp",
+        "CategoryId": 1,
+        "BrandId": 7
+    },
+    {
+        "Name": "ROG Strix Scar 15",
+        "Description": "Powerful gaming laptop with AMD Ryzen 9 and RTX 3070",
+        "Price": 2299.99,
+        "PictureUrl": "images/products/ROG-Strix-Scar-15.webp",
+        "CategoryId": 5,
+        "BrandId": 4
+    },
+    {
+        "Name": "HP Envy 13",
+        "Description": "Stylish and powerful Ultrabook with a high-resolution display",
+        "Price": 1299.99,
+        "PictureUrl": "images/products/HP-Envy-13.webp",
+        "CategoryId": 6,
+        "BrandId": 1
+    },
+    {
+        "Name": "Microsoft Surface Laptop 4",
+        "Description": "Premium laptop with touchscreen and excellent build quality",
+        "Price": 1299.99,
+        "PictureUrl": "images/products/Microsoft-Surface-Laptop-4.webp",
+        "CategoryId": 3,
+        "BrandId": 7
+    },
+    {
+        "Name": "Dell XPS 13",
+        "Description": "Powerful and compact laptop with InfinityEdge display",
+        "Price": 1299.99,
+        "PictureUrl": "images/products/Dell-XPS-13.webp",
+        "CategoryId": 6,
+        "BrandId": 3
+    },
+    {
+        "Name": "MacBook Air",
+        "Description": "Thin and lightweight laptop with Retina display",
+        "Price": 1199.99,
+        "PictureUrl": "images/products/MacBook-Air.webp",
+        "CategoryId": 7,
+        "BrandId": 2
+    },
+    {
+        "Name": "HP Spectre Folio",
+        "Description": "Luxurious 2-in-1 laptop with leather finish and premium features",
+        "Price": 2099.99,
+        "PictureUrl": "images/products/HP-Spectre-Folio.webp",
+        "CategoryId": 3,
+        "BrandId": 1
+    },
+    {
+        "Name": "HP Pavilion x360",
+        "Description": "2-in-1 convertible notebook with touchscreen and sleek design",
+        "Price": 799.99,
+        "PictureUrl": "images/products/HP-Pavilion-x360.webp",
+        "CategoryId": 7,
+        "BrandId": 1
+    },
+    {
+        "Name": "HP Omen 15",
+        "Description": "MId-range gaming laptop with AMD Ryzen 7 and GTX 1660 Ti",
+        "Price": 1499.99,
+        "PictureUrl": "images/products/HP-Omen-15.webp",
+        "CategoryId": 5,
+        "BrandId": 1
+    },
+    {
+        "Name": "Dell Inspiron 14 2-in-1",
+        "Description": "Flexible laptop with touchscreen and versatile modes",
+        "Price": 999.99,
+        "PictureUrl": "images/products/Dell-Inspiron-14-2-in-1.webp",
+        "CategoryId": 1,
+        "BrandId": 3
+    },
+    {
+        "Name": "Microsoft Surface Laptop Go",
+        "Description": "Compact and lightweight ultraportable laptop with a 12.4-inch PixelSense display",
+        "Price": 699.99,
+        "PictureUrl": "images/products/Microsoft-Surface-Laptop-Go.webp",
+        "CategoryId": 4,
+        "BrandId": 7
+    },
+    {
+        "Name": "Lenovo Legion 7",
+        "Description": "Premium gaming laptop with Ryzen 9 and RTX 3080",
+        "Price": 2399.99,
+        "PictureUrl": "images/products/Lenovo-Legion-7.webp",
+        "CategoryId": 5,
+        "BrandId": 6
+    },
+    {
+        "Name": "Dell Latitude 9410",
+        "Description": "Premium business laptop with long battery life and sleek design",
+        "Price": 1599.99,
+        "PictureUrl": "images/products/Dell-Latitude-9410.webp",
+        "CategoryId": 2,
+        "BrandId": 3
+    }
+]

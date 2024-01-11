@@ -4,14 +4,14 @@
     "D:\\E-Commerce Project\\Repository\\Repository.csproj": {}
   },
   "projects": {
-    "D:\\E-Commerce Project\\Repository\\Repository.csproj": {
+    "D:\\E-Commerce Project\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\E-Commerce Project\\Repository\\Repository.csproj",
-        "projectName": "Repository",
-        "projectPath": "D:\\E-Commerce Project\\Repository\\Repository.csproj",
+        "projectUniqueName": "D:\\E-Commerce Project\\Core\\Core.csproj",
+        "projectName": "Core",
+        "projectPath": "D:\\E-Commerce Project\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\Haitham\\.nuget\\packages\\",
-        "outputPath": "D:\\E-Commerce Project\\Repository\\obj\\",
+        "outputPath": "D:\\E-Commerce Project\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Haitham\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,71 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.405\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\E-Commerce Project\\Repository\\Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\E-Commerce Project\\Repository\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "D:\\E-Commerce Project\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\Haitham\\.nuget\\packages\\",
+        "outputPath": "D:\\E-Commerce Project\\Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Haitham\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\E-Commerce Project\\Core\\Core.csproj": {
+                "projectPath": "D:\\E-Commerce Project\\Core\\Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.15, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

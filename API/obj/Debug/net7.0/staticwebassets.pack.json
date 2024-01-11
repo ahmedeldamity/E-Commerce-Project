@@ -1,0 +1,145 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\ASUS-ROG-Strix-Scar-17.webp",
+      "PackagePath": "staticwebassets\\images\\products\\ASUS-ROG-Strix-Scar-17.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Alienware-m15.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Alienware-m15.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Asus-ROG-Zephyrus-G14.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Asus-ROG-Zephyrus-G14.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Asus-ZenBook-14.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Asus-ZenBook-14.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Asus-ZenBook-Flip-14.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Asus-ZenBook-Flip-14.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Asus-ZenBook-Pro-Duo.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Asus-ZenBook-Pro-Duo.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Dell-Inspiron-14-2-in-1.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Dell-Inspiron-14-2-in-1.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Dell-Latitude-9410.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Dell-Latitude-9410.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Dell-XPS-13.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Dell-XPS-13.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Gear-Dell-XPS-15-OLED.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Gear-Dell-XPS-15-OLED.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\HP-Elite-Dragonfly.webp",
+      "PackagePath": "staticwebassets\\images\\products\\HP-Elite-Dragonfly.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\HP-Envy-13.webp",
+      "PackagePath": "staticwebassets\\images\\products\\HP-Envy-13.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\HP-Omen-15.webp",
+      "PackagePath": "staticwebassets\\images\\products\\HP-Omen-15.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\HP-Pavilion-x360.webp",
+      "PackagePath": "staticwebassets\\images\\products\\HP-Pavilion-x360.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\HP-Spectre-Folio.webp",
+      "PackagePath": "staticwebassets\\images\\products\\HP-Spectre-Folio.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\HP-Spectre-x360.webp",
+      "PackagePath": "staticwebassets\\images\\products\\HP-Spectre-x360.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Lenovo-Ideapad-5.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Lenovo-Ideapad-5.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Lenovo-Legion-7.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Lenovo-Legion-7.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Lenovo-Slim-7.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Lenovo-Slim-7.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Lenovo-ThinkPad-X1-Carbon.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Lenovo-ThinkPad-X1-Carbon.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Lenovo-Yoga-C940.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Lenovo-Yoga-C940.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\MacBook-Air.webp",
+      "PackagePath": "staticwebassets\\images\\products\\MacBook-Air.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\MacBook-Pro-13.webp",
+      "PackagePath": "staticwebassets\\images\\products\\MacBook-Pro-13.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\MacBook-Pro-16-inch.webp",
+      "PackagePath": "staticwebassets\\images\\products\\MacBook-Pro-16-inch.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\MacBook-Pro-Gaming-Edition.webp",
+      "PackagePath": "staticwebassets\\images\\products\\MacBook-Pro-Gaming-Edition.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Microsoft-Surface-Book-3.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Microsoft-Surface-Book-3.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Microsoft-Surface-Laptop-4.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Microsoft-Surface-Laptop-4.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Microsoft-Surface-Laptop-Go.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Microsoft-Surface-Laptop-Go.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\ROG-Strix-Scar-15.webp",
+      "PackagePath": "staticwebassets\\images\\products\\ROG-Strix-Scar-15.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Samsung-Galaxy-Book-Pro.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Samsung-Galaxy-Book-Pro.webp"
+    },
+    {
+      "Id": "D:\\E-Commerce Project\\API\\wwwroot\\images\\products\\Surface-Laptop-Studio.webp",
+      "PackagePath": "staticwebassets\\images\\products\\Surface-Laptop-Studio.webp"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.API.props",
+      "PackagePath": "build\\API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.API.props",
+      "PackagePath": "buildMultiTargeting\\API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.API.props",
+      "PackagePath": "buildTransitive\\API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
