@@ -1,4 +1,5 @@
-﻿using Core.Interfaces.Repositories;
+﻿using API.Helpers;
+using Core.Interfaces.Repositories;
 using Core.Interfaces.Services;
 using Repository;
 using Service;
@@ -24,6 +25,12 @@ namespace API.ServicesExtension
 
             //Register Product Service
             services.AddScoped(typeof(IProductService), typeof(ProductService));
+
+            // --- Two Ways To Register AutoMapper
+            // - First (harder)
+            //builder.Services.AddAutoMapper(M => M.AddProfile(new MappingProfiles()));
+            // - Second (easier)
+            services.AddAutoMapper(typeof(MappingProfiles));
 
             return services;
         }
