@@ -14,9 +14,9 @@ namespace Service
         {
             _unitOfWork = unitOfWork;
         }
-        public async Task<IReadOnlyList<Product>> GetProductsAsync()
+        public async Task<IReadOnlyList<Product>> GetProductsAsync(int? brandId, int? categoryId)
         {
-            var spec = new ProductWithBrandAndCategorySpecifications();
+            var spec = new ProductWithBrandAndCategorySpecifications(brandId, categoryId);
             var products = await _unitOfWork.Repository<Product>().GetAllWithSpecAsync(spec);
             return products;
         }

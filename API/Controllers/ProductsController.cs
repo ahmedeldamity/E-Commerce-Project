@@ -13,9 +13,9 @@ namespace API.Controllers
             _productService = productService;
         }
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts()
+        public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts(int? brandId, int? categoryId)
         {
-            var products = await _productService.GetProductsAsync();
+            var products = await _productService.GetProductsAsync(brandId, categoryId);
             return Ok(products);
         }
         [HttpGet("{id}")]
