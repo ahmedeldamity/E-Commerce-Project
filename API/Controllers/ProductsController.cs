@@ -1,4 +1,5 @@
 ﻿using API.Dtos;
+using API.Errors;
 using AutoMapper;
 using Core.Entities;
 using Core.Interfaces.Services;
@@ -23,11 +24,32 @@ namespace API.Controllers
             var products = await _productService.GetProductsAsync(specParams);
             return Ok(_mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products));
         }
+
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(ProductToReturnDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
         public async Task<ActionResult<IReadOnlyList<Product>>> GetProduct(int id)
         {
             var product = await _productService.GetProductAsync(id);
+
+            if(product is null)
+                return NotFound(new ApiResponse(404));
+
             return Ok(_mapper.Map<Product, ProductToReturnDto>(product));
+        }
+
+        [HttpGet("brands")]
+        public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetBrands()
+        {
+            var brands = await _productService.GetBrandsAsync();
+            return Ok(brands);
+        }
+
+        [HttpGet("categories")]
+        public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetCategories()
+        {
+            var categories = await _productService.GetCategoriesAsync();
+            return Ok(categories);
         }
     }
 }
