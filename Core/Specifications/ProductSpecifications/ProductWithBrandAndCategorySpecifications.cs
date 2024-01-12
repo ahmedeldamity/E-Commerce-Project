@@ -14,7 +14,8 @@ namespace Core.Specifications.ProductSpecifications
             IncludesCriteria.Add(p => p.Brand);
             IncludesCriteria.Add(p => p.Category);
             WhereCriteria =
-               p => (!specParams.brandId.HasValue || p.BrandId == specParams.brandId.Value) &&
+               p => (string.IsNullOrEmpty(specParams.search) || p.Name.ToLower().Contains(specParams.search.ToLower())) && 
+               (!specParams.brandId.HasValue || p.BrandId == specParams.brandId.Value) &&
                (!specParams.categoryId.HasValue || p.CategoryId == specParams.categoryId.Value);
             
             if(!string.IsNullOrEmpty(specParams.sort))
