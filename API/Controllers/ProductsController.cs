@@ -1,14 +1,12 @@
 ﻿using Core.Entities;
 using Core.Interfaces.Services;
-using Core.Specifications.ProductSpecifications;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
     public class ProductsController : BaseApiController
     {
-        private readonly IProductService _productService;
+        private readonly IProductService _productService;   
 
         public ProductsController(IProductService productService)
         {
