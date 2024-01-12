@@ -1,5 +1,6 @@
 ﻿using Core.Entities;
 using Core.Interfaces.Services;
+using Core.Specifications.ProductSpecifications;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -13,9 +14,9 @@ namespace API.Controllers
             _productService = productService;
         }
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts(int? brandId, int? categoryId)
+        public async Task<ActionResult<IReadOnlyList<Product>>> GetProducts([FromQuery] ProductSpecificationParameters specParams)
         {
-            var products = await _productService.GetProductsAsync(brandId, categoryId);
+            var products = await _productService.GetProductsAsync(specParams);
             return Ok(products);
         }
         [HttpGet("{id}")]

@@ -9,13 +9,37 @@ namespace Core.Specifications.ProductSpecifications
 {
     public class ProductWithBrandAndCategorySpecifications: BaseSpecification<Product>
     {
-        public ProductWithBrandAndCategorySpecifications(int? brandId, int? categoryId)
+        public ProductWithBrandAndCategorySpecifications(ProductSpecificationParameters specParams)
         {
             IncludesCriteria.Add(p => p.Brand);
             IncludesCriteria.Add(p => p.Category);
             WhereCriteria =
-               p => (!brandId.HasValue || p.BrandId == brandId.Value) &&
-               (!categoryId.HasValue || p.CategoryId == categoryId.Value);
+               p => (!specParams.brandId.HasValue || p.BrandId == specParams.brandId.Value) &&
+               (!specParams.categoryId.HasValue || p.CategoryId == specParams.categoryId.Value);
+            
+            if(!string.IsNullOrEmpty(specParams.sort))
+            {
+                switch (specParams.sort)
+                {
+                    case "name":
+                        OrderBy = p => p.Name;
+                        break;
+                    case "nameDesc":
+                        OrderByDesc = p => p.Name;
+                        break;
+                    case "price":
+                        OrderBy = p => p.Price;
+                        break;
+                    case "priceDesc":
+                        OrderByDesc = p => p.Price;
+                        break;
+                    default:
+                        OrderBy = p => p.Price;
+                        break;
+                }
+            }
+            else
+                OrderBy = p => p.Price;
         }
 
         public ProductWithBrandAndCategorySpecifications(int id)
