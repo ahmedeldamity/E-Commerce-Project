@@ -20,5 +20,16 @@ namespace Core.Specifications
         {
             WhereCriteria = whereCriteria;
         }
+
+        public int Skip { get; set; }
+        public int Take { get; set; }
+        public bool IsPaginationEnabled { get; set; }
+
+        public void ApplyPagination(int skip, int take)
+        {
+            IsPaginationEnabled = true;
+            Skip = skip;
+            Take = take;
+        }
     }
 }
