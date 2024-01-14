@@ -23,7 +23,7 @@ namespace API.ServicesExtension
             // Register Unit Of Work
             services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
 
-            //Register Product Service
+            // Register Product Service
             services.AddScoped(typeof(IProductService), typeof(ProductService));
 
             // --- Two Ways To Register AutoMapper
@@ -31,6 +31,9 @@ namespace API.ServicesExtension
             //builder.Services.AddAutoMapper(M => M.AddProfile(new MappingProfiles()));
             // - Second (easier)
             services.AddAutoMapper(typeof(MappingProfiles));
+
+            // Register Basket Repository
+            services.AddScoped(typeof(IBasketRepository), typeof(BasketRepository));
 
             return services;
         }

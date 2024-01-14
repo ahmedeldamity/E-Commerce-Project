@@ -83,3 +83,5 @@ D:\E-Commerce Project\API\bin\Debug\net7.0\Service.dll
 D:\E-Commerce Project\API\bin\Debug\net7.0\Service.pdb
 D:\E-Commerce Project\API\bin\Debug\net7.0\AutoMapper.dll
 D:\E-Commerce Project\API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\E-Commerce Project\API\bin\Debug\net7.0\Pipelines.Sockets.Unofficial.dll
+D:\E-Commerce Project\API\bin\Debug\net7.0\StackExchange.Redis.dll

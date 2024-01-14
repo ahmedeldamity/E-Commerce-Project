@@ -4,6 +4,7 @@ using API.ServicesExtension;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Repository.Data;
+using StackExchange.Redis;
 
 #region Update Database Problems And Solution
 // To Update Database You Should Do Two Things 
@@ -38,6 +39,13 @@ builder.Services.AddSwaggerServices();
 builder.Services.AddDbContext<StoreContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
+// Redis DbContext
+builder.Services.AddSingleton<IConnectionMultiplexer>(serviceProvider =>
+{
+    var connection = builder.Configuration.GetConnectionString("Redis");
+    return ConnectionMultiplexer.Connect(connection);
 });
 
 // This Method Has All Application Services

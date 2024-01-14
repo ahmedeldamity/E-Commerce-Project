@@ -1,6 +1,4 @@
 ﻿using Core.Entities;
-using Core.Interfaces.Repositories;
-using Core.Specifications;
 using Core.Specifications.ProductSpecifications;
 
 namespace Core.Interfaces.Services

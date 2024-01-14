@@ -1,6 +1,7 @@
 ﻿using API.Dtos;
 using AutoMapper;
 using Core.Entities;
+using Core.Entities.Basket_Entities;
 
 namespace API.Helpers
 {
@@ -11,6 +12,10 @@ namespace API.Helpers
             CreateMap<Product, ProductToReturnDto>()
                 .ForMember(F => F.Brand, C => C.MapFrom(S => S.Brand.Name))
                 .ForMember(F => F.Category, C => C.MapFrom(S => S.Category.Name));
+
+            CreateMap<BasketDto, Basket>();
+
+            CreateMap<BasketItemDto, BasketItem>();
         }
     }
 }
