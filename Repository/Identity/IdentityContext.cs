@@ -1,7 +1,6 @@
 ﻿using Core.Entities.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
 
 namespace Repository.Identity
 {
@@ -17,7 +16,9 @@ namespace Repository.Identity
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            builder.ApplyConfigurationsFromAssembly(Assembly.GetEntryAssembly());
+
+            builder.Entity<Address>()
+                .ToTable("Addresses");
         }
     }
 }

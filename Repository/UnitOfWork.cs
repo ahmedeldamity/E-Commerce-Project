@@ -1,6 +1,5 @@
 ﻿using Core.Entities;
 using Core.Interfaces.Repositories;
-using Microsoft.EntityFrameworkCore;
 using Repository.Data;
 using System.Collections;
 

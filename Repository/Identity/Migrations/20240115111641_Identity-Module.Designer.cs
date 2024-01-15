@@ -12,7 +12,7 @@ using Repository.Identity;
 namespace Repository.Identity.Migrations
 {
     [DbContext(typeof(IdentityContext))]
-    [Migration("20240115105144_Identity-Module")]
+    [Migration("20240115111641_Identity-Module")]
     partial class IdentityModule
     {
         /// <inheritdoc />
@@ -62,7 +62,7 @@ namespace Repository.Identity.Migrations
                     b.HasIndex("AppUserId")
                         .IsUnique();
 
-                    b.ToTable("Address");
+                    b.ToTable("Addresses", (string)null);
                 });
 
             modelBuilder.Entity("Core.Entities.Identity.AppUser", b =>

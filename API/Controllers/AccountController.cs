@@ -1,7 +1,6 @@
 ﻿using API.Dtos;
 using API.Errors;
 using Core.Entities.Identity;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +18,8 @@ namespace API.Controllers
         }
 
         [HttpPost("login")]
+        [ProducesResponseType(typeof(AppUserDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult<AppUserDto>> Login(LoginDto model)
         {
             var user = await _userManager.FindByEmailAsync(model.Email);
@@ -30,6 +31,32 @@ namespace API.Controllers
 
             if (result.Succeeded is false)
                 return Unauthorized(new ApiResponse(401));
+
+            return Ok(new AppUserDto
+            {
+                DisplayName = user.DisplayName,
+                Email = model.Email,
+                Token = "Here Is Will Be Token"
+            });
+        }
+
+        [HttpPost("register")]
+        [ProducesResponseType(typeof(AppUserDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<AppUserDto>> Register(RegisterDto model)
+        {
+            var user = new AppUser()
+            {
+                DisplayName = model.DisplayName,
+                Email = model.Email,
+                UserName = model.Email.Split('@')[0],
+                PhoneNumber = model.PhoneNumber,
+            };
+
+            var result = await _userManager.CreateAsync(user, model.Password);
+
+            if (result.Succeeded is false)
+                return BadRequest(new ApiResponse(400));
 
             return Ok(new AppUserDto
             {
