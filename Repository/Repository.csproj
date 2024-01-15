@@ -8,9 +8,7 @@
 
   <ItemGroup>
     <Folder Include="Data\DataSeeding\" />
-    <Folder Include="Identity\Configurations\" />
     <Folder Include="Identity\Migrations\" />
-    <Folder Include="Identity\DataSeeding\" />
   </ItemGroup>
 
   <ItemGroup>
