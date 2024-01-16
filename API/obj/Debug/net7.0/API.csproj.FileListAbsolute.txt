@@ -91,3 +91,4 @@ D:\E-Commerce Project\API\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityF
 D:\E-Commerce Project\API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dll
 D:\E-Commerce Project\API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 D:\E-Commerce Project\API\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\E-Commerce Project\API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

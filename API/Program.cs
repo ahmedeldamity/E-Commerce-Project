@@ -2,11 +2,13 @@ using API.Errors;
 using API.Middlewares;
 using API.ServicesExtension;
 using Core.Entities.Identity;
+using Core.Interfaces.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Repository.Data;
 using Repository.Identity;
+using Service;
 using StackExchange.Redis;
 
 #region Update Database Problems And Solution
@@ -73,6 +75,8 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(option =>
 // ? this because the three services talking to another Store Services
 // such as (UserManager talk to IUserStore to take all services like createAsync)
 // so we allowed dependency injection to this services too
+
+builder.Services.AddScoped(typeof(IAuthService), typeof(AuthService));
 
 // This Method Has All Application Services
 builder.Services.AddApplicationServices();
