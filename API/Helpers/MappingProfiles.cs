@@ -16,6 +16,10 @@ namespace API.Helpers
             CreateMap<BasketDto, Basket>();
 
             CreateMap<BasketItemDto, BasketItem>();
+
+            CreateMap<Core.Entities.Identity.Address, AddressDto>();
+
+            CreateMap<AddressDto, Core.Entities.Identity.Address>();
         }
     }
 }

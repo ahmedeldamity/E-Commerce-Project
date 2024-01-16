@@ -1,22 +1,28 @@
 ﻿using API.Dtos;
 using API.Errors;
+using AutoMapper;
 using Core.Entities.Identity;
 using Core.Interfaces.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace API.Controllers
 {
     public class AccountController : BaseApiController
     {
         private readonly UserManager<AppUser> _userManager;
+        private readonly IMapper _mapper;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly IAuthService _authService;
 
-        public AccountController(UserManager<AppUser> userManager, 
+        public AccountController(UserManager<AppUser> userManager, IMapper mapper,
             SignInManager<AppUser> signInManager, IAuthService authService)
         {
             _userManager = userManager;
+            _mapper = mapper;
             _signInManager = signInManager;
             _authService = authService;
         }
@@ -68,6 +74,64 @@ namespace API.Controllers
                 Email = model.Email,
                 Token = await _authService.CreateTokenAsync(user, _userManager)
             });
+        }
+
+        [Authorize]
+        [HttpGet]
+        public async Task<ActionResult<AppUserDto>> GetCurrentUser()
+        {
+            var email = User.FindFirstValue(ClaimTypes.Email);
+            var user = await _userManager.FindByEmailAsync(email);
+            return Ok(new AppUserDto()
+            {
+                DisplayName = user.DisplayName,
+                Email = user.Email,
+                Token = await _authService.CreateTokenAsync(user, _userManager)
+            });
+        }
+
+        [Authorize]
+        [HttpGet("address")]
+        public async Task<ActionResult<AddressDto>> GetCurrentUserAddress()
+        {
+            var email = User.FindFirstValue(ClaimTypes.Email);
+
+            //var user = await _userManager.FindByEmailAsync(email);
+            // -- we don't use it because it load user without navigational property so I created extension method do that
+
+            var user = await _userManager.Users.Include(x => x.Address).SingleOrDefaultAsync(u => u.Email == email);
+
+            return Ok(_mapper.Map<Address, AddressDto>(user.Address));
+        }
+
+        [Authorize]
+        [HttpPut("address")]
+        [ProducesResponseType(typeof(AddressDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<AddressDto>> UpdateUserAddress(AddressDto updatedAddress)
+        {
+            var address = _mapper.Map<AddressDto, Address>(updatedAddress);
+
+            var email = User.FindFirstValue(ClaimTypes.Email);
+
+            var user = await _userManager.Users.Include(x => x.Address).SingleOrDefaultAsync(u => u.Email == email);
+
+            updatedAddress.Id = user.Address.Id;
+
+            user.Address = address;
+
+            var result = await _userManager.UpdateAsync(user);
+
+            if (!result.Succeeded)
+                return BadRequest(new ApiResponse(400));
+
+            return Ok(updatedAddress);
+        }
+
+        [HttpGet("emailexists")]
+        public async Task<ActionResult<bool>> CheckEmailExist(string email)
+        {
+            return await _userManager.FindByEmailAsync(email) is not null;
         }
     }
 }
