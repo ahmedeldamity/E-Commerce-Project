@@ -40,7 +40,7 @@ namespace API.Controllers
             {
                 DisplayName = user.DisplayName,
                 Email = model.Email,
-                Token = "Here Is Will Be Token"
+                Token = await _authService.CreateTokenAsync(user, _userManager)
             });
         }
 
@@ -66,7 +66,7 @@ namespace API.Controllers
             {
                 DisplayName = user.DisplayName,
                 Email = model.Email,
-                Token = "Here Is Will Be Token"
+                Token = await _authService.CreateTokenAsync(user, _userManager)
             });
         }
     }

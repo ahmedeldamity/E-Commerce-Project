@@ -10,6 +10,7 @@ using Repository.Data;
 using Repository.Identity;
 using Service;
 using StackExchange.Redis;
+using Talabat.Services;
 
 #region Update Database Problems And Solution
 // To Update Database You Should Do Two Things 

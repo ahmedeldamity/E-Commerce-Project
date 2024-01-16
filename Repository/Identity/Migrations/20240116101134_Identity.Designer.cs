@@ -12,8 +12,8 @@ using Repository.Identity;
 namespace Repository.Identity.Migrations
 {
     [DbContext(typeof(IdentityContext))]
-    [Migration("20240115111641_Identity-Module")]
-    partial class IdentityModule
+    [Migration("20240116101134_Identity")]
+    partial class Identity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
