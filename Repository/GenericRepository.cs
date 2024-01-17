@@ -29,5 +29,19 @@ namespace Repository
         {
             return await SpecificationsEvaluator<T>.GetQuery(_storeContext.Set<T>(), spec).FirstOrDefaultAsync();
         }
+        public async Task AddAsync(T entity)
+        {
+            await _storeContext.Set<T>().AddAsync(entity);
+        }
+
+        public void Update(T entity)
+        {
+            _storeContext.Set<T>().Update(entity);
+        }
+
+        public void Delete(T entity)
+        {
+            _storeContext.Set<T>().Remove(entity);
+        }
     }
 }
