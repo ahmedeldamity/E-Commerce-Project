@@ -2,6 +2,7 @@
 using Core.Entities.Order_Entities;
 using Core.Interfaces.Repositories;
 using Core.Interfaces.Services;
+using Core.Specifications.Order_Specifications;
 
 namespace Service
 {
@@ -55,6 +56,17 @@ namespace Service
                 return null;
 
             return order;
+        }
+
+        public async Task<IReadOnlyList<Order>> GetOrdersForUserAsync(string buyerEmail)
+        {
+            var ordersRepo = _unitOfWork.Repository<Order>();
+
+            var spec = new OrderSpecifications(buyerEmail);
+
+            var orders = await ordersRepo.GetAllWithSpecAsync(spec);
+
+            return orders;
         }
     }
 }

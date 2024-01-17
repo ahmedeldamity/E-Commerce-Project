@@ -3,11 +3,13 @@ using API.Errors;
 using AutoMapper;
 using Core.Entities.Order_Entities;
 using Core.Interfaces.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
 namespace API.Controllers
 {
+    [Authorize]
     public class OrderController : BaseApiController
     {
         private readonly IOrderService _orderService;
@@ -36,5 +38,13 @@ namespace API.Controllers
 
             return Ok(_mapper.Map<Order, OrderToReturnDto>(order));
         }
-    }
-}
+
+        [HttpGet]
+        public async Task<ActionResult<IReadOnlyList<OrderToReturnDto>>> GetOrdersForUser()
+        {
+            var buyerEmail = User.FindFirstValue(ClaimTypes.Email);
+            var orders = await _orderService.GetOrdersForUserAsync(buyerEmail);
+            return Ok(_mapper.Map<IReadOnlyList<Order>, IReadOnlyList<OrderToReturnDto>>(orders));
+        }
+    }   
+} 
