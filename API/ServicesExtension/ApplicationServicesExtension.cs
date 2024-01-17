@@ -35,6 +35,9 @@ namespace API.ServicesExtension
             // Register Basket Repository
             services.AddScoped(typeof(IBasketRepository), typeof(BasketRepository));
 
+            // Register Order Service
+            services.AddScoped(typeof(IOrderService), typeof(OrderService));
+
             return services;
         }
     }

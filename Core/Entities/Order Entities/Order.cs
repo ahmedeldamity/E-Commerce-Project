@@ -46,6 +46,6 @@
         // -- second
         public decimal GetTotal() => SubTotal + DeliveryMethod.Cost;
 
-        public string PaymentIntentId { get; set; }
+        public string PaymentIntentId { get; set; } = string.Empty;
     }
 }

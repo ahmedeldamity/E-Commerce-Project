@@ -92,7 +92,7 @@ namespace API.Controllers
 
         [Authorize]
         [HttpGet("address")]
-        public async Task<ActionResult<AddressDto>> GetCurrentUserAddress()
+        public async Task<ActionResult<OrderAddressDto>> GetCurrentUserAddress()
         {
             var email = User.FindFirstValue(ClaimTypes.Email);
 
@@ -101,14 +101,14 @@ namespace API.Controllers
 
             var user = await _userManager.Users.Include(x => x.Address).SingleOrDefaultAsync(u => u.Email == email);
 
-            return Ok(_mapper.Map<Address, AddressDto>(user.Address));
+            return Ok(_mapper.Map<Address, OrderAddressDto>(user.Address));
         }
 
         [Authorize]
         [HttpPut("address")]
-        [ProducesResponseType(typeof(AddressDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(OrderAddressDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<AddressDto>> UpdateUserAddress(AddressDto updatedAddress)
+        public async Task<ActionResult<OrderAddressDto>> UpdateUserAddress(AddressDto updatedAddress)
         {
             var address = _mapper.Map<AddressDto, Address>(updatedAddress);
 

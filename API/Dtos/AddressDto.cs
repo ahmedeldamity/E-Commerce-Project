@@ -4,17 +4,21 @@ namespace API.Dtos
 {
     public class AddressDto
     {
-        [Required]
-        public int Id { get; set; }
+        public int Id { get; set; } // I Take this property from Current Token (User.Address.Id)
 
+        [Required]
         public string FirstName { get; set; }
 
+        [Required]
         public string LastName { get; set; }
 
+        [Required]
         public string Street { get; set; }
 
+        [Required]
         public string City { get; set; }
 
-        public string Country { get; set; }
+        [Required]
+        public string Country { get; set; }   
     }
 }
