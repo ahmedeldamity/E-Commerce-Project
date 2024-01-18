@@ -19,9 +19,9 @@ namespace Core.Specifications.Order_Specifications
             OrderByDesc = P => P.OrderDate;
         }
 
-        public OrderSpecifications(int orderId, string buyerEmail)
+        public OrderSpecifications(string buyerEmail, int orderId)
         {
-            WhereCriteria = P => P.Id == orderId && P.BuyerEmail == buyerEmail;
+            WhereCriteria = P => P.BuyerEmail == buyerEmail && P.Id == orderId;
 
             IncludesCriteria.Add(P => P.DeliveryMethod);
             IncludesCriteria.Add(P => P.Items);

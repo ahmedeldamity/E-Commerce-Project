@@ -68,5 +68,17 @@ namespace Service
 
             return orders;
         }
+
+        public async Task<Order?> GetSpecificOrderForUserAsync(int orderId, string buyerEmail)
+        {
+            var ordersRepo = _unitOfWork.Repository<Order>();
+
+            var spec = new OrderSpecifications(buyerEmail, orderId);
+
+            var order = await ordersRepo.GetByIdWithSpecAsync(spec);
+
+            return order;
+        }
+    
     }
 }
