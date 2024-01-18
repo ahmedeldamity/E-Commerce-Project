@@ -80,9 +80,6 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(option =>
 // such as (UserManager talk to IUserStore to take all services like createAsync)
 // so we allowed dependency injection to this services too
 
-// Register AuthService
-builder.Services.AddScoped(typeof(IAuthService), typeof(AuthService));
-
 // AddAuthentication() : this method take one argument (Default Schema)
 // and when we using .AddJwtBearer(): this method can take from you another schema and options
 // and can take just options and this options worked on the default schema that you written it in AddAuthentication()
@@ -195,6 +192,12 @@ if (app.Environment.IsDevelopment())
     // -- Add Swagger Middelwares In Extension Method
     app.UseSwaggerMiddleware();
 }
+
+// -- To Redirect Any Http Request To Https
+app.UseHttpsRedirection();
+
+// -- To this application can resolve on any static file like (html, wwwroot, etc..)
+app.UseStaticFiles();
 
 // -- Error Not Found End Point: Here When This Error Thrown: It Redirect To This End Point in (Controller: Errors)
 app.UseStatusCodePagesWithReExecute("/error/{0}");

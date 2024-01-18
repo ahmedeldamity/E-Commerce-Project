@@ -3,6 +3,7 @@ using Core.Interfaces.Repositories;
 using Core.Interfaces.Services;
 using Repository;
 using Service;
+using Talabat.Services;
 
 namespace API.ServicesExtension
 {
@@ -37,6 +38,9 @@ namespace API.ServicesExtension
 
             // Register Order Service
             services.AddScoped(typeof(IOrderService), typeof(OrderService));
+
+            // Register AuthService
+            services.AddScoped(typeof(IAuthService), typeof(AuthService));
 
             return services;
         }

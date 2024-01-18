@@ -30,7 +30,7 @@ namespace API.Controllers
 
             if (createdOrUpdated is null) return BadRequest(new ApiResponse(400));
 
-            return Ok(createdOrUpdated);
+            return Ok(_mapper.Map<Basket, BasketToReturnDto>(createdOrUpdated));
         }
         
         [HttpGet]
@@ -38,7 +38,7 @@ namespace API.Controllers
         {
             var basket = await _basketRepository.GetBasketAsync(id);
 
-            return Ok(basket ?? new Basket(id));
+            return Ok(basket is null ? new Basket(id) : _mapper.Map<Basket, BasketToReturnDto>(basket));
         }
 
         [HttpDelete]

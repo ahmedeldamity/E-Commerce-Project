@@ -36,7 +36,7 @@ namespace API.Controllers
         [HttpGet("{id}")]
         [ProducesResponseType(typeof(ProductToReturnDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse), StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<IReadOnlyList<Product>>> GetProduct(int id)
+        public async Task<ActionResult<IReadOnlyList<ProductToReturnDto>>> GetProduct(int id)
         {
             var product = await _productService.GetProductAsync(id);
 
