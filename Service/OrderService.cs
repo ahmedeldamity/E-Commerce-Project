@@ -10,13 +10,15 @@ namespace Service
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IBasketRepository _basketRepository;
+        private readonly IPaymentService _paymentService;
 
-        public OrderService(IUnitOfWork unitOfWork, IBasketRepository basketRepository)
+        public OrderService(IUnitOfWork unitOfWork, IBasketRepository basketRepository, IPaymentService paymentService)
         {
             _unitOfWork = unitOfWork;
             _basketRepository = basketRepository;
+            _paymentService = paymentService;
         }
-        public async Task<Order?> CreateOrderAsync(string buyerEmail, string basketId, int deliveryMethodId, OrderAddress shippingAddress)
+        public async Task<Order?> CreateOrderAsync(string buyerEmail, string basketId, OrderAddress shippingAddress)
         {
             // 1. Get basket from basket repository
             var basket = await _basketRepository.GetBasketAsync(basketId);
@@ -42,12 +44,29 @@ namespace Service
             var subTotal = orderitems.Sum(orderItem => orderItem.Price * orderItem.Quantity);
 
             // 4. Get Delivery Method
-            var deliveryMethod = await _unitOfWork.Repository<OrderDeliveryMethod>().GetByIdAsync(deliveryMethodId);
+            var deliveryMethod = await _unitOfWork.Repository<OrderDeliveryMethod>().GetByIdAsync(basket.DeliveryMethodId);
 
-            // 5. Create Order
-            var order = new Order(buyerEmail, shippingAddress, deliveryMethod, orderitems, subTotal);
+            // Additional Step: check if order has Payment Intent will remove it
+            var orderRepository = _unitOfWork.Repository<Order>();
 
-            await _unitOfWork.Repository<Order>().AddAsync(order);
+            var orderSpec = new OrderWithPaymentIntentSpecifications(basket.PaymentIntentId);
+
+            var existingOrder = await orderRepository.GetByIdWithSpecAsync(orderSpec);
+
+            if (existingOrder != null)
+            {
+                orderRepository.Delete(existingOrder);
+
+                // If order has old payment and then client update basket and don't create new payment then
+                // client will pay on old payment intent
+                // so I will create new payment from here for update payment so amount will updated
+                await _paymentService.CreateOrUpdatePaymentIntent(basketId);
+            }
+
+            // 5. Create New Order
+            var order = new Order(buyerEmail, shippingAddress, deliveryMethod, orderitems, subTotal, basket.PaymentIntentId);
+
+            await orderRepository.AddAsync(order);
 
             // 6. SaveChanges()
             var result = await _unitOfWork.CompleteAsync();

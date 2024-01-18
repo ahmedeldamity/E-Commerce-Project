@@ -6,13 +6,14 @@
         {
             // we create this constractor because EF need it while migration
         }
-        public Order(string buyerEmail, OrderAddress shippingAddress, OrderDeliveryMethod deliveryMethod, ICollection<OrderItem> items, decimal subTotal)
+        public Order(string buyerEmail, OrderAddress shippingAddress, OrderDeliveryMethod deliveryMethod, ICollection<OrderItem> items, decimal subTotal, string paymentIntentId)
         {
             BuyerEmail = buyerEmail;
             ShippingAddress = shippingAddress;
             DeliveryMethod = deliveryMethod;
             Items = items;
             SubTotal = subTotal;
+            PaymentIntentId = paymentIntentId;
         }
 
         public string BuyerEmail { get; set; }
@@ -46,6 +47,6 @@
         // -- second
         public decimal GetTotal() => SubTotal + DeliveryMethod.Cost;
 
-        public string PaymentIntentId { get; set; } = string.Empty;
+        public string PaymentIntentId { get; set; }
     }
 }

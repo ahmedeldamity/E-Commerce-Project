@@ -1,4 +1,6 @@
-﻿namespace API.Dtos
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace API.Dtos
 {
     public class BasketDto
     {
@@ -6,6 +8,7 @@
 
         public List<BasketItemDto> Items { get; set; }
 
+        [Required]
         public int DeliveryMethodId { get; set; }
     }
 }

@@ -32,11 +32,10 @@ namespace Service
             if (basket is null)
                 return null;
 
-            if(basket.DeliveryMethodId.HasValue)
-            {
-                var deliveryMethod = await _unitOfWork.Repository<OrderDeliveryMethod>().GetByIdAsync(basket.DeliveryMethodId.Value);
-                basket.ShippingPrice = deliveryMethod.Cost;
-            }
+            
+            var deliveryMethod = await _unitOfWork.Repository<OrderDeliveryMethod>().GetByIdAsync(basket.DeliveryMethodId);
+            basket.ShippingPrice = deliveryMethod.Cost;
+            
 
             if(basket?.Items.Count > 0)
             {

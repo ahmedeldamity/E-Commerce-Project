@@ -31,7 +31,7 @@ namespace API.Controllers
 
             var address = _mapper.Map<OrderAddressDto, OrderAddress>(orderDto.ShippingAddress);
 
-            var order = await _orderService.CreateOrderAsync(buyerEmail, orderDto.BasketId, orderDto.DeliveryMethodId, address);
+            var order = await _orderService.CreateOrderAsync(buyerEmail, orderDto.BasketId, address);
 
             if (order is null)
                 return BadRequest(new ApiResponse(400));
