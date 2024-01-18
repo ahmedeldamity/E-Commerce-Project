@@ -92,3 +92,5 @@ D:\E-Commerce Project\API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Core.dl
 D:\E-Commerce Project\API\bin\Debug\net7.0\Microsoft.Extensions.Identity.Stores.dll
 D:\E-Commerce Project\API\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 D:\E-Commerce Project\API\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\E-Commerce Project\API\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\E-Commerce Project\API\bin\Debug\net7.0\Stripe.net.dll

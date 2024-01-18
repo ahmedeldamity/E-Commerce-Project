@@ -53,7 +53,7 @@ namespace Service
 
             PaymentIntent paymentIntent;
             
-            if(string.IsNullOrEmpty(basket.PaymentIntentId)) // create new payment intent
+            if(string.IsNullOrEmpty(basket?.PaymentIntentId)) // create new payment intent
             {
                 var createOptions = new PaymentIntentCreateOptions()
                 {

@@ -42,6 +42,9 @@ namespace API.ServicesExtension
             // Register AuthService
             services.AddScoped(typeof(IAuthService), typeof(AuthService));
 
+            // Register PaymentService
+            services.AddScoped(typeof(IPaymentService), typeof(PaymentService));
+
             return services;
         }
     }
