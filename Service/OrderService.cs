@@ -79,6 +79,14 @@ namespace Service
 
             return order;
         }
-    
+
+        public async Task<IReadOnlyList<OrderDeliveryMethod>> GetAllDeliveryMethodsAsync()
+        {
+            var deliveryMethodsRepo = _unitOfWork.Repository<OrderDeliveryMethod>();
+
+            var deliveryMethods = await deliveryMethodsRepo.GetAllAsync();
+
+            return deliveryMethods;
+        }
     }
 }
