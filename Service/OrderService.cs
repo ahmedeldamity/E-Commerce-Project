@@ -44,7 +44,7 @@ namespace Service
             var subTotal = orderitems.Sum(orderItem => orderItem.Price * orderItem.Quantity);
 
             // 4. Get Delivery Method
-            var deliveryMethod = await _unitOfWork.Repository<OrderDeliveryMethod>().GetByIdAsync(basket.DeliveryMethodId);
+            var deliveryMethod = await _unitOfWork.Repository<OrderDeliveryMethod>().GetByIdAsync(basket.DeliveryMethodId.Value);
 
             // Additional Step: check if order has Payment Intent will remove it
             var orderRepository = _unitOfWork.Repository<Order>();

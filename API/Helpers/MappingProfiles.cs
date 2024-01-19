@@ -37,6 +37,8 @@ namespace API.Helpers
 
             CreateMap<Address, OrderAddressDto>();
 
+            CreateMap<Address, AddressDto>().ReverseMap();
+
             CreateMap<OrderAddressDto, Address>();
 
             CreateMap<OrderAddressDto, OrderAddress>();
@@ -52,7 +54,5 @@ namespace API.Helpers
                 .ForMember(d => d.PictureUrl, o => o.MapFrom<OrderItemPictureUrlResolver>());
 
         }
-
-        public IConfiguration Configuration { get; }
     }
 }

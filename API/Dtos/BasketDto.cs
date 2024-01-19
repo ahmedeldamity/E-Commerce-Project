@@ -8,7 +8,6 @@ namespace API.Dtos
 
         public List<BasketItemDto> Items { get; set; }
 
-        [Required]
-        public int DeliveryMethodId { get; set; }
+        public int? DeliveryMethodId { get; set; }
     }
 }

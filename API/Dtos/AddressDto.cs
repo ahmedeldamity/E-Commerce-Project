@@ -4,8 +4,6 @@ namespace API.Dtos
 {
     public class AddressDto
     {
-        public int Id { get; set; } // I Take this property from Current Token (User.Address.Id)
-
         [Required]
         public string FirstName { get; set; }
 

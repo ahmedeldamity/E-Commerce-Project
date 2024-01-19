@@ -119,8 +119,6 @@ namespace API.Controllers
 
             var user = await _userManager.Users.Include(x => x.Address).SingleOrDefaultAsync(u => u.Email == email);
 
-            updatedAddress.Id = user.Address.Id;
-
             user.Address = address;
 
             var result = await _userManager.UpdateAsync(user);
